@@ -13,6 +13,7 @@ def fetch_status(url):
         print("\t- content:", body)
         print("\t- utf8 content:", body.decode('utf-8'))
 
+url = 'https://intranet.hbtn.io/status'
 if __name__ == "__main__":
     url = 'http://0.0.0.0:5050/status'
     fetch_status(url)
