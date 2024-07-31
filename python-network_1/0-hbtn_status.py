@@ -6,7 +6,7 @@ This module fetches the status from a given URL and displays the body response.
 import urllib.request
 
 if __name__ == "__main__":
-    url = 'https://alu-intranet.hbtn.io/status'
+    url = 'http://0.0.0.0:5050/status'
 
     with urllib.request.urlopen(url) as response:
         body = response.read()
