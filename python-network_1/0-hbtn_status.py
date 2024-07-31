@@ -1,17 +1,18 @@
 #!/usr/bin/python3
 """
-This module fetches the status from a given URL and displays the body response.
+This script fetches https://alu-intranet.hbtn.io/status
+using urllib package and displays the response body.
 """
-
 import urllib.request
 
-if __name__ == "__main__":
-    url = 'http://0.0.0.0:5050/status'
-
+def fetch_status(url):
     with urllib.request.urlopen(url) as response:
         body = response.read()
+        print("Body response:")
+        print("\t- type:", type(body))
+        print("\t- content:", body)
+        print("\t- utf8 content:", body.decode('utf-8'))
 
-    print("Body response:")
-    print("\t- type: {}".format(type(body)))
-    print("\t- content: {}".format(body))
-    print("\t- utf8 content: {}".format(body.decode('utf-8')))
+if __name__ == "__main__":
+    url = 'https://alu-intranet.hbtn.io/status'
+    fetch_status(url)
