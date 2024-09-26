@@ -4,7 +4,8 @@ const num = process.argv.length;
 const x = [];
 
 switch (num) {
-  case 1:
+  case 2:
+  case 3:
     console.log(0);
     break;
 
