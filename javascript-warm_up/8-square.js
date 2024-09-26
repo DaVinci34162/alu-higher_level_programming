@@ -11,7 +11,6 @@ if (x){
 }
 else if (x < 0){
     console.log();
-}else (x === undefined || isNaN(x))
-{
+}else {
     console.log('Missing size');
 }
